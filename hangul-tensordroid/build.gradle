@@ -15,10 +15,11 @@ buildscript {
 
 allprojects {
     repositories {
+        // The order in which you list these repositories matter.
+        google()
         jcenter()
     }
 }
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
@@ -29,10 +30,3 @@ dependencies {
 	implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}" 
 }
 
-allprojects {
-    repositories {
-        // The order in which you list these repositories matter.
-        google()
-        jcenter()
-    }
-}
