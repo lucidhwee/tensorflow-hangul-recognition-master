@@ -15,18 +15,10 @@ buildscript {
 
 allprojects {
     repositories {
-        // The order in which you list these repositories matter.
-        google()
         jcenter()
     }
 }
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-
-dependencies { 
-	def appCenterSdkVersion = '1.8.0' 
-	implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}" 
-	implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}" 
-}
-
